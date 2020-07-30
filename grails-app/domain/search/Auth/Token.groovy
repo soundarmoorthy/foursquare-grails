@@ -1,9 +1,10 @@
-package search
+package search.Auth
 
 import org.grails.datastore.gorm.GormEntity
 
 class Token implements GormEntity<Token> {
 
+    //TODO : Move it to database
     static OnlyAvailableToken(){
         Token t = new Token();
         t.setToken("1441307151_4492f25946a2e8e1414a8bb53dab8a6ba1cf4615");

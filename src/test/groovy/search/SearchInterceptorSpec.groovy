@@ -1,6 +1,7 @@
 package search
 
 import grails.testing.web.interceptor.InterceptorUnitTest
+import search.Auth.SearchInterceptor
 import spock.lang.Specification
 
 class SearchInterceptorSpec extends Specification implements InterceptorUnitTest<SearchInterceptor> {

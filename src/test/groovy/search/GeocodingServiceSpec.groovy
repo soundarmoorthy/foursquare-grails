@@ -1,9 +1,9 @@
-package GeocodingService
+package search
 
 import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class CsServiceSpec extends Specification implements ServiceUnitTest<CsService>{
+class GeocodingServiceSpec extends Specification implements ServiceUnitTest<GeocodingService>{
 
     def setup() {
     }

@@ -1,6 +1,7 @@
 package search
 
 import grails.testing.services.ServiceUnitTest
+import search.Auth.AuthService
 import spock.lang.Specification
 
 class AuthServiceSpec extends Specification implements ServiceUnitTest<AuthService>{

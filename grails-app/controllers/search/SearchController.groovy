@@ -16,8 +16,5 @@ class SearchController extends RestfulController {
         bindData(query, params, [include: ['name', 'street_name', 'number', 'city', 'zip']]);
         def results = searchService.Search(query);
         render results;
-//        withFormat {
-//            json { render results as JSON}
-//        }
     }
 }

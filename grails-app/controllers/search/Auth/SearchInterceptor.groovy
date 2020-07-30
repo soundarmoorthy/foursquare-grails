@@ -1,6 +1,5 @@
-package search
+package search.Auth
 
-import org.apache.catalina.connector.Request
 
 class SearchInterceptor {
     def authService;
