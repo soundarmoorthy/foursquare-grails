@@ -1,6 +1,8 @@
 package search
 
-class SearchQuery {
+import org.grails.datastore.gorm.GormEntity
+
+class SearchQuery implements GormEntity<SearchQuery> {
 
     static constraints = {
     }

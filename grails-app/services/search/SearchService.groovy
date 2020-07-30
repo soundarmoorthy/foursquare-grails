@@ -7,13 +7,26 @@ import groovy.util.logging.Slf4j
 @Transactional
 @Slf4j
 class SearchService {
-    static fourSquareApi = "https://api.foursquare.com/v2/venues/search";
-    static client_id = "client_secret_foursquare";
-    static client_secret = "client_secret_foursquare";
-    static geocode_api = "https://maps.googleapis.com/maps/api/geocode/json";
-    static geocode_key = "<geocode-key>";
+    static fourSquareApi = System.getenv("fourSquareApi");
+    static client_id = System.getenv("client_id")
+    static client_secret = System.getenv("client_secret");
+    static geocode_api = System.getenv("geocode_api");
+    static geocode_key = System.getenv("geocode_key");
 
     def Search(queryParams) {
+        /*
+
+        var providers = ISearchDirectoryProviders.getProviders(queryParams);
+
+        //multithreaded List<SearchResult> results;
+        providers.each { p ->
+        IQueryIput in = p.GetQueryTranslator(searchQuery);
+        def result = p.search(in);
+        def normalized = p.Normalize(result)
+        results.add(normalized)
+        }
+         */
+
         def address = URLEncoder.encode(queryParams.getAddress(), "UTF-8")
         def location = getLocation(address)
         def results = getResultsFromFourSquare(queryParams.getName(), location)
