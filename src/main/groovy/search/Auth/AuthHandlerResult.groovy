@@ -1,4 +1,4 @@
-package search
+package search.Auth
 
 class AuthHandlerResult {
     int errorCode;

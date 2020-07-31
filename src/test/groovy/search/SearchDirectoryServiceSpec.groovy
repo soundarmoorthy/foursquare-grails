@@ -1,9 +1,9 @@
 package search
 
-import grails.testing.gorm.DomainUnitTest
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class SearchSpec extends Specification implements DomainUnitTest<SearchQuery> {
+class SearchDirectoryServiceSpec extends Specification implements ServiceUnitTest<SearchDirectoryService>{
 
     def setup() {
     }

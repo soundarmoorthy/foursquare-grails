@@ -1,11 +1,7 @@
 package search
 
-import org.grails.datastore.gorm.GormEntity
 
-class SearchQuery implements GormEntity<SearchQuery> {
-
-    static constraints = {
-    }
+class SearchQuery {
 
     String name;
     String street_name;
@@ -13,6 +9,8 @@ class SearchQuery implements GormEntity<SearchQuery> {
     String city;
     int zip;
 
+    float latitude;
+    float longitude;
 
     def getAddress()
     {

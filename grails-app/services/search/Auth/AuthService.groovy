@@ -2,7 +2,6 @@ package search.Auth
 
 import grails.gorm.transactions.Transactional
 import org.apache.catalina.connector.Request
-import search.AuthHandlerResult
 
 @Transactional
 class AuthService {

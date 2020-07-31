@@ -1,8 +1,6 @@
 package search.Auth
 
-import org.grails.datastore.gorm.GormEntity
-
-class Token implements GormEntity<Token> {
+class Token {
 
     //TODO : Move it to database
     static OnlyAvailableToken(){
@@ -16,8 +14,5 @@ class Token implements GormEntity<Token> {
     String token;
     String clientName;
     String location;
-
-    static constraints = {
-    }
 
 }

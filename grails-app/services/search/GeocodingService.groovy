@@ -1,6 +1,7 @@
 package search
 
 import grails.gorm.transactions.Transactional
+import grails.util.Pair
 import groovy.json.JsonSlurper
 
 @Transactional
@@ -10,7 +11,7 @@ class GeocodingService {
 
     //AddressLine is the full address in format "addr1, addr2, city, zip"
     //This is a format expected by google geocoding apart from many other formats
-    def getGeoLocationAsString(String addressLine) {
+    def getLatLong(String addressLine) {
         def address = URLEncoder.encode(addressLine, "UTF-8")
         return format(
                 getLocation(address)
@@ -30,6 +31,7 @@ class GeocodingService {
     def format(def loc)
     {
 
-        return "${loc.lat[0]},${loc.lng[0]}"
+        def latLong = new Pair<>(loc.lat[0], loc.lng[0]);
+        return latLong
     }
 }
