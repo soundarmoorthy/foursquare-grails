@@ -1,6 +1,6 @@
 # foursquare-grails
 
-The applicatio basically is a wrapper for the foursquare venue search API. The application is a rest API application based on grails 3.3.11. 
+The application is basically a wrapper for the foursquare venue search API. It is a rest API based on grails 3.3.11. 
 
 #### Setup
 * Install grails 3.3.11
