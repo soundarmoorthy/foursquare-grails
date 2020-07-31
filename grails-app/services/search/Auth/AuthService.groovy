@@ -11,19 +11,18 @@ class AuthService {
         def auth = new AuthHandlerResult();
 
         if (!authHeaderPresent(req)) {
-            return auth.failed ("The auth_token header is missing")
+            return auth.failed("The auth_token header is missing")
         }
 
         String auth_token = req.getParameter(auth_token_param)
         if (!authTokenHasHeaderValue(auth_token)) {
-            return auth.failed ("The auth_token header has an invalid value")
-        }
+            return auth.failed("The auth_token header has an invalid value")
 
-        if (!validToken(auth_token)) {
-            return auth.failed ("The given auth_token is not registered. Please use a valid auth token. Contact api@uberall.com");
-        }
-        //Finally if none of these happen, the authentication succeeded
-        return auth.succeeded()
+        } else if (!validToken(auth_token)) {
+            return auth.failed("The given auth_token is not registered. Please use a valid auth token. Contact api@uberall.com");
+
+        } else
+            return auth.succeeded()
     }
 
     private boolean validToken(auth_token) {
