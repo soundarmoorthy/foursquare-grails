@@ -6,7 +6,11 @@ The application is basically a wrapper for the foursquare venue search API. It i
 * Install grails 3.3.11
 * IntelliJ Idea community
 * Java 1.8
-
+* Google geocoding credentials. Define two environment variables as follows that the application can pick up.
+```
+    geocode_api
+    geocode_key
+```
 #### Usage
 The following postman query will be a useful starting point to test the application. The auth token is for educational purposes and i don't see any issues about anyone using it
 
